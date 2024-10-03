@@ -1,0 +1,197 @@
+import React from "react";
+import { Grid, Card, CardContent, CardHeader, CardActions,
+    Typography,
+    Button
+} from '@mui/material';
+import { LineChart, Area, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,  ComposedChart } from 'recharts';
+import HomeIcon from '@mui/icons-material/Home';
+import CodeIcon from '@mui/icons-material/Code';
+
+const LatestNotes =() => <div>LatestNotes</div>
+const HotContacts =() => <div>Сбои при взаимодействии с ЕМИАС</div>
+const DealsPipeline =() => <div>Сбои при обращении к серверу</div>
+
+const data = [
+    {
+        name: '09:30',
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+    },
+    {
+        name: '11:00',
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+    },
+    {
+        name: '12:30',
+        uv: 2000,
+        pv: 9800,
+        amt: 2290,
+    },
+    {
+        name: '14:00',
+        uv: 2780,
+        pv: 3908,
+        amt: 2000,
+    },
+    {
+        name: '15:30',
+        uv: 1890,
+        pv: 4800,
+        amt: 2181,
+    },
+    {
+        name: '17:00',
+        uv: 2390,
+        pv: 3800,
+        amt: 2500,
+    },
+    {
+        name: '18:30',
+        uv: 3490,
+        pv: 4300,
+        amt: 2100,
+    },
+];
+/*
+                        <CardActions>
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                href="http://hermeswl-test.rt.ru/HermesMsgWeb/superprotected/MessageQueue?CUR_SYSTEM_COD=dbhermes"
+                                startIcon={<HomeIcon />}
+                            >
+                                Очередь обработки сообщений для системы
+                            </Button>
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                href="http://hermeswl-test.rt.ru/HermesMsgWeb/superprotected/RemoteSystem?CUR_SYSTEM_COD=dbhermes"
+                                startIcon={<CodeIcon />}
+                            >
+                                Внешние системы взаимодействия
+                            </Button>
+                        </CardActions>
+ */
+const DashBoard:React.FC = () => 
+        <Card>
+            <Grid container spacing={2} mt={1}>
+                <Grid item xs={12} md={9}>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <LineChart
+                            width={500}
+                            height={300}
+                            data={data}
+                            margin={{
+                                top: 5,
+                                right: 30,
+                                left: 20,
+                                bottom: 5,
+                            }}
+                        >
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend />
+                            <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                        </LineChart>
+                    </ResponsiveContainer>
+                </Grid>
+                <Grid item xs={12} md={3}>
+                    <Card
+                        sx={{
+                            background: `#c5dedd`,
+                            color: 'rgba(0, 0, 0, 0.87)',
+                            padding: '1em',
+                            marginBottom: '1em',
+                            marginTop: '2em',
+                            [`& .MuiCardActions-root`]: {
+                                p: 2,
+                                mt: -2,
+                                mb: -1,
+                                flexDirection: 'column',
+                                '& a': {
+                                    mb: 1,
+                                    color: 'rgba(0, 0, 0, 0.87)',
+                                    backgroundColor: 'white',
+                                    marginLeft: '0 !important',
+                                },
+                            },
+                        }}
+                    >
+                        <CardContent>
+                            <Typography variant="h5" gutterBottom>
+                                Система ведения справочников и настроек интеграционных компонент и контроля функционирования
+                            </Typography>
+                            <Typography gutterBottom>
+                                Здесь в дальнейшем могут быть размещены графики и
+                                диаграммы, наглядно показывающие работу системы и
+                                пользователей в ней.
+                            </Typography>
+                            <Typography gutterBottom>
+                                В качестве параметров для графиков могут быть взяты
+                                расчетов по обращению к внешним систем а также
+                                были ли сбои при обращении к серверной части ситемы.
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                href="http://test.ru"
+                                startIcon={<HomeIcon />}
+                            >
+                                Очередь обработки сообщений для системы
+                            </Button>
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                href="http://test.ru"
+                                startIcon={<CodeIcon />}
+                            >
+                                Внешние системы для взаимодействия
+                            </Button>
+                        </CardActions>
+                    </Card>
+
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <div style={{ width: '100%', height: 300 }}>
+                        <ResponsiveContainer>
+                            <ComposedChart
+                                width={500}
+                                height={400}
+                                data={data}
+                                margin={{
+                                    top: 20,
+                                    right: 20,
+                                    bottom: 20,
+                                    left: 20,
+                                }}
+                            >
+                                <CartesianGrid stroke="#f5f5f5" />
+                                <XAxis dataKey="name" scale="band" />
+                                <YAxis />
+                                <Tooltip />
+                                <Legend />
+                                <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
+                                <Bar dataKey="pv" barSize={20} fill="#413ea0" />
+                                <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+                            </ComposedChart>
+                        </ResponsiveContainer>
+                    </div>
+                </Grid>
+                <Grid item xs={12} md={3}>
+                    <HotContacts />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                    <DealsPipeline />
+                </Grid>
+            </Grid>
+        </Card>
+
+export default DashBoard;

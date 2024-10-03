@@ -1,0 +1,6 @@
+include:
+  - project: 'cicd/git02'
+    ref: main
+    file:
+#      - 'e-admin/.gitlab-ci.yml'
+      - 'e-all-front/all-front.gitlab-ci.yml'

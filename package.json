@@ -1,0 +1,96 @@
+{
+    "name": "bus-admin.v02-4.16.x",
+    "version": "4.09.10",
+    "private": true,
+    "dependencies": {
+        "@mui/icons-material": "^5.0.1",
+        "@mui/material": "^5.0.2",
+        "@mui/styles": "^5.14.18",
+        "@nivo/bar": "^0.79.1",
+        "@nivo/core": "^0.79.0",
+        "@nivo/tooltip": "0.79.0",
+        "@react-admin/ra-ai": "^4.0.9",
+        "@react-admin/ra-audit-log": "^4.1.2",
+        "@react-admin/ra-calendar": "^5.1.1",
+        "@react-admin/ra-datagrid-ag": "^4.1.0",
+        "@react-admin/ra-editable-datagrid": "^4.6.4",
+        "@react-admin/ra-enterprise": "^7.1.0",
+        "@react-admin/ra-form-layout": "^4.9.7",
+        "@react-admin/ra-history": "^4.0.0",
+        "@react-admin/ra-json-schema-form": "^2.1.0",
+        "@react-admin/ra-markdown": "^4.2.0",
+        "@react-admin/ra-navigation": "^4.9.6",
+        "@react-admin/ra-preferences": "^1.4.4",
+        "@react-admin/ra-rbac": "^4.5.2",
+        "@react-admin/ra-realtime": "^4.5.3",
+        "@react-admin/ra-relationships": "^4.5.13",
+        "@react-admin/ra-search": "^4.6.0",
+        "@react-admin/ra-tour": "^4.1.0",
+        "@react-admin/ra-tree": "^4.5.0",
+        "axios": "^1.3.6",
+        "clsx": "^2.1.1",
+        "date-fns": "^2.29.3",
+        "final-form": "^4.20.6",
+        "lodash": "^4.17.21",
+        "mobx": "^6.6.2",
+        "mobx-react": "^7.5.3",
+        "prop-types": "^15.7.2",
+        "react": "^18.0.0",
+        "react-admin": "^4.16.20",
+        "react-beautiful-dnd": "^13.1.0",
+        "react-dom": "^18.0.0",
+        "react-error-boundary": "^3.1.4",
+        "react-query": "^3.39.0",
+        "react-router": "^6.19.0",
+        "react-router-dom": "^6.1.0",
+        "react-scripts": "^5.0.1",
+        "recharts": "2.1.16",
+        "uuidv4": "^6.2.13"
+    },
+    "devDependencies": {
+        "@types/lodash": "~4.14.168",
+        "@types/react": "^18.0.28",
+        "@types/react-beautiful-dnd": "13.1.0",
+        "@types/react-dom": "^18.0.0",
+        "@types/react-router": "^5.1.20",
+        "@types/react-router-dom": "^5.3.3",
+        "eslint-config-airbnb": "18.2.1",
+        "eslint-config-prettier": "8.3.0",
+        "eslint-config-react": "1.1.7",
+        "eslint-plugin-react-hooks": "4.5.0",
+        "rewire": "^5.0.0",
+        "source-map-explorer": "^2.0.0",
+        "typescript": "^4.8.0",
+        "webpack": "5.72.1",
+        "webpack-cli": "4.9.2",
+        "webpack-dev-server": "4.9.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "homepage": ".",
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 3 chrome version",
+            "last 3 firefox version",
+            "last 3 safari version"
+        ]
+    },
+    "resolutions": {
+        "react-admin": "4.16.18"
+    }
+}
